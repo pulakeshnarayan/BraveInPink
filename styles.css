@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #111;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.header {
+  background: #000;
+  color: white;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar a:hover {
+  color: #ff1cae;
+}
+
+.hero {
+  background: linear-gradient(to right, #ff1cae, #ff6bd4);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.section.light {
+  background-color: #f9f9f9;
+}
+
+.tracker {
+  background: #ddd;
+  height: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+.tracker-fill {
+  height: 100%;
+  width: 30%;
+  background: #ff1cae;
+  transition: width 1s ease-in-out;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  background-color: #ff1cae;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.btn.outline {
+  background-color: transparent;
+  border: 2px solid #ff1cae;
+  color: #ff1cae;
+}
+
+footer {
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
