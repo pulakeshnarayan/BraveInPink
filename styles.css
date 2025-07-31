@@ -1,3 +1,4 @@
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -5,12 +6,14 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #fff;
   color: #111;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
+/* Containers */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -18,8 +21,15 @@ body {
   padding: 40px 0;
 }
 
+.section-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #e91e63;
+}
+
+/* Header */
 .header {
-  background: #000;
+  background: #111;
   color: white;
   padding: 20px 0;
   position: sticky;
@@ -27,70 +37,91 @@ body {
   z-index: 1000;
 }
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .logo {
   font-size: 28px;
-  font-weight: bold;
+  font-weight: 600;
+}
+
+.logo .highlight {
+  color: #ff1cae;
 }
 
 .navbar {
   display: flex;
-  justify-content: flex-end;
-  gap: 20px;
+  gap: 25px;
 }
 
 .navbar a {
   color: white;
   text-decoration: none;
   font-size: 16px;
+  transition: color 0.3s;
 }
 
 .navbar a:hover {
   color: #ff1cae;
 }
 
+/* Hero Section */
 .hero {
   background: linear-gradient(to right, #ff1cae, #ff6bd4);
   color: white;
   text-align: center;
-  padding: 100px 20px;
+  padding: 120px 20px;
 }
 
 .hero h2 {
-  font-size: 40px;
-  margin-bottom: 20px;
+  font-size: 42px;
+  margin-bottom: 15px;
 }
 
 .hero p {
   font-size: 18px;
-  margin-bottom: 30px;
+  max-width: 700px;
+  margin: 0 auto 30px;
 }
 
+/* Section Styling */
 .section {
-  padding: 60px 0;
+  padding: 70px 20px;
   text-align: center;
 }
 
 .section.light {
-  background-color: #f9f9f9;
+  background-color: #fdf2f9;
 }
 
+/* Donation Tracker */
 .tracker {
-  background: #ddd;
+  background: #e0e0e0;
   height: 30px;
-  border-radius: 15px;
+  border-radius: 30px;
   overflow: hidden;
-  margin: 20px auto;
+  margin: 25px auto;
   width: 100%;
   max-width: 600px;
 }
 
 .tracker-fill {
   height: 100%;
-  width: 30%;
+  width: 0%;
   background: #ff1cae;
-  transition: width 1s ease-in-out;
+  transition: width 1.2s ease-in-out;
 }
 
+.goal-text {
+  font-weight: 500;
+  color: #444;
+  margin-top: 10px;
+}
+
+/* Form Styling */
 form {
   display: flex;
   flex-direction: column;
@@ -99,23 +130,32 @@ form {
   margin: auto;
 }
 
-form input, form textarea {
-  padding: 10px;
+form input,
+form textarea {
+  padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
 }
 
+/* Buttons */
 .btn {
   background-color: #ff1cae;
   color: white;
   padding: 12px 25px;
   border: none;
-  border-radius: 5px;
-  font-weight: bold;
+  border-radius: 30px;
+  font-weight: 600;
   text-decoration: none;
   display: inline-block;
   margin-top: 10px;
   cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e91e63;
 }
 
 .btn.outline {
@@ -124,9 +164,19 @@ form input, form textarea {
   color: #ff1cae;
 }
 
+.btn.outline:hover {
+  background-color: #ff1cae;
+  color: white;
+}
+
+/* Footer */
 footer {
-  background: #000;
+  background: #111;
   color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 25px 0;
+}
+
+footer .highlight {
+  color: #ff1cae;
 }
