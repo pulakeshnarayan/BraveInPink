@@ -2,73 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BraveInNiggas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brave In Pink</title>
   <link rel="stylesheet" href="styles.css" />
-  <script src="script.js" defer></script>
 </head>
 <body>
-
-  <!-- Header -->
   <header class="header">
-    <div class="container header-container">
-      <h1 class="logo">Brave<span class="highlight">In</span>Niggas</h1>
+    <div class="container">
+      <div class="logo">Brave<span style="color: #ff69b4;">In</span>Pink</div>
       <nav class="navbar">
-        <a href="#home">Home</a>
-        <a href="#mission">Mission</a>
+        <a href="#about">About</a>
         <a href="#donate">Donate</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-text">
-      <h2>Empowering Lives Through Compassion</h2>
-      <p>Your kindness can change lives. Join BraveInPink in our fight to uplift women and families in need.</p>
-      <a href="#donate" class="btn">Donate Now</a>
-    </div>
+  <section class="hero">
+    <h2>Brave In Pink</h2>
+    <p>Empowering lives affected by breast cancer through community action, events, and support.</p>
+    <a href="#signup" class="btn">Join Our Next Event</a>
   </section>
 
-  <!-- Mission Section -->
-  <section id="mission" class="section">
+  <section id="about" class="section light">
     <div class="container">
-      <h2 class="section-title">Our Mission</h2>
-      <p>BraveInPink is dedicated to supporting individuals and families through inclusive, community-driven action and advocacy. We believe in the power of love, support, and awareness to create real change.</p>
+      <h2>About Us</h2>
+      <p>We’re a youth-led nonprofit dedicated to raising awareness and supporting individuals impacted by breast cancer.</p>
     </div>
   </section>
 
-  <!-- Donation Tracker -->
+  <section id="signup" class="section">
+    <div class="container">
+      <h2>Sign Up for Our Next Event</h2>
+      <form>
+        <input type="text" placeholder="Full Name" />
+        <input type="email" placeholder="Email Address" />
+        <button class="btn">Sign Up</button>
+      </form>
+    </div>
+  </section>
+
   <section id="donate" class="section light">
     <div class="container">
-      <h2 class="section-title">Donation Tracker</h2>
+      <h2>Help Us Reach Our Goal</h2>
       <div class="tracker">
-        <div class="tracker-fill" id="tracker-fill"></div>
+        <div id="tracker-fill" class="tracker-fill"></div>
       </div>
-      <p class="goal-text">Raised $3,000 of $10,000 goal</p>
-      <a href="#" class="btn outline">Support Us</a>
+      <a href="https://www.gofundme.com/" target="_blank" class="btn outline">Donate on GoFundMe</a>
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact" class="section">
     <div class="container">
-      <h2 class="section-title">Contact Us</h2>
+      <h2>Contact Us</h2>
       <form>
-        <input type="text" placeholder="Name" required />
-        <input type="email" placeholder="Email" required />
-        <textarea placeholder="Your message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
+        <input type="text" placeholder="Your Name" />
+        <input type="email" placeholder="Your Email" />
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button class="btn">Send Message</button>
       </form>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 <span class="highlight">BraveInPink</span>. All rights reserved.</p>
+    <p>© 2025 Brave In Pink. All rights reserved.</p>
   </footer>
-  
-<p style="text-align:center; color:#ff1cae;">Updated successfully!</p>
+
+  <script src="script.js"></script>
 </body>
 </html>
