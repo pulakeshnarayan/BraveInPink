@@ -4,125 +4,117 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Brave In Pink</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'DM Sans', sans-serif;
-      background-color: #fff;
-      color: #111;
+      padding: 0;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #ffffff;
+      color: #222;
     }
 
     header {
-      background: #fff;
-      border-bottom: 1px solid #eee;
-      padding: 25px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      background-color: #fce4ec;
+      padding: 30px 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      text-align: center;
     }
 
     .logo {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #f06292;
+      font-size: 3rem;
+      font-weight: 900;
+      color: #222;
+    }
+
+    .logo span {
+      color: #f8a5c2;
+      font-weight: 400;
+    }
+
+    nav {
+      margin-top: 15px;
     }
 
     nav a {
-      margin-left: 30px;
+      margin: 0 20px;
       text-decoration: none;
+      font-size: 1.1rem;
       font-weight: 500;
-      font-size: 1rem;
       color: #444;
-      transition: color 0.3s ease;
+      position: relative;
     }
 
-    nav a:hover {
-      color: #f06292;
+    nav a::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background: #f8a5c2;
+      width: 0;
+      transition: width 0.3s ease-in-out;
     }
 
-    .hero {
-      padding: 120px 20px 60px;
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .section {
+      padding: 80px 20px;
       text-align: center;
-      max-width: 800px;
-      margin: auto;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
-    .hero h1 {
-      font-size: 3rem;
-      color: #222;
+    h1, h2 {
       margin-bottom: 20px;
     }
 
-    .hero p {
-      font-size: 1.2rem;
-      color: #666;
-      line-height: 1.8;
-    }
-
-    section {
-      padding: 80px 20px;
-      max-width: 1000px;
-      margin: auto;
-      text-align: center;
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #f8a5c2;
     }
 
     h2 {
       font-size: 2rem;
-      color: #f06292;
-      margin-bottom: 20px;
+      font-weight: 600;
+      color: #f8a5c2;
     }
 
-    p {
+    p, li {
       font-size: 1.1rem;
-      color: #444;
-      line-height: 1.7;
-    }
-
-    .highlight-img {
-      width: 100%;
-      max-width: 650px;
-      margin: 30px auto;
-      border-radius: 12px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
-      display: block;
+      line-height: 1.8;
+      color: #333;
     }
 
     ul {
       list-style: none;
       padding: 0;
-      margin-top: 20px;
-      text-align: left;
     }
 
-    ul li {
-      font-size: 1rem;
-      color: #444;
-      margin-bottom: 10px;
-    }
-
-    strong {
-      color: #111;
+    .highlight-img {
+      width: 100%;
+      max-width: 600px;
+      margin: 30px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      display: block;
     }
 
     footer {
-      padding: 40px 20px;
-      text-align: center;
       background-color: #fce4ec;
-      color: #666;
+      padding: 30px 0;
+      text-align: center;
       font-size: 0.95rem;
+      color: #666;
     }
 
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
-      animation: fadeIn 1s ease forwards;
+      animation: fadeInUp 0.8s ease forwards;
     }
 
-    @keyframes fadeIn {
+    @keyframes fadeInUp {
       to {
         opacity: 1;
         transform: translateY(0);
@@ -132,7 +124,7 @@
 </head>
 <body>
   <header>
-    <div class="logo">Brave In Pink</div>
+    <div class="logo">Brave<span>In</span>Pink</div>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -141,42 +133,55 @@
     </nav>
   </header>
 
-  <section class="hero fade-in">
-    <h1>Fighting Breast Cancer Together</h1>
-    <p>Brave In Pink unites communities around the world through global action, hope, and support for those battling breast cancer. Join our mission to empower, educate, and heal.</p>
+  <section class="section fade-in">
+    <h1>Welcome to BraveInPink</h1>
+    <p>Uniting people around the world in the fight against breast cancer through compassion, awareness, and global collaboration.</p>
   </section>
 
-  <section class="fade-in">
+  <section class="section fade-in">
     <h2>Our Mission</h2>
-    <p>We host international summits, fund lifesaving research, and inspire survivors through powerful storytelling and global collaboration. Together, we move closer to a world without breast cancer.</p>
+    <p>BraveInPink is dedicated to supporting global breast cancer initiatives by hosting international events, collaborating with leading research institutions, and inspiring hope in patients and survivors across the globe.</p>
   </section>
 
-  <section class="fade-in">
+  <section class="section fade-in">
     <h2>Event Highlights</h2>
     <img src="assets/previous-event.jpg" alt="Previous Event" class="highlight-img" />
-    <p>In 2025, over 2,000 supporters across five continents united to raise awareness and hope. Your participation helped spark real change.</p>
+    <p>Over 2,000 people joined our international event in 2025, helping raise funds and awareness that reached across borders and saved lives.</p>
     <img src="assets/winners.jpg" alt="Event Winners" class="highlight-img" />
   </section>
 
-  <section class="fade-in">
+  <section class="section fade-in">
     <h2>Upcoming Global Summit</h2>
     <img src="assets/upcoming-event.jpg" alt="Upcoming Event" class="highlight-img" />
     <ul>
       <li><strong>Date:</strong> October 15, 2025</li>
-      <li><strong>Location:</strong> New York City & Global Livestream</li>
-      <li><strong>Speakers:</strong> Oncologists, survivors, global activists</li>
-      <li><strong>Topics:</strong> Early detection, global research, survivor journeys</li>
+      <li><strong>Location:</strong> New York City & Livestreamed Worldwide</li>
+      <li><strong>Keynote Speakers:</strong> Global oncologists, survivors, advocates</li>
+      <li><strong>Topics:</strong> Research, outreach strategies, survivor stories</li>
     </ul>
   </section>
 
   <footer>
-    <p>&copy; 2025 Brave In Pink. Uniting the world against breast cancer.</p>
+    <p>&copy; 2025 BraveInPink. Empowering a world without breast cancer.</p>
   </footer>
 
   <script>
-    const fadeInEls = document.querySelectorAll('.fade-in');
-    fadeInEls.forEach((el, i) => {
-      el.style.animationDelay = `${i * 0.2}s`;
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.3,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
     });
   </script>
 </body>
