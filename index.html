@@ -5,70 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Brave In Pink</title>
   <style>
+    /* Reset */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fff7fa;
-      color: #333;
+      background-color: #fff9fb;
+      color: #222;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
     header {
-      background-color: #ffd1dc;
-      padding: 25px 0;
+      background-color: #fcd0da;
+      padding: 20px;
       text-align: center;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
 
     .logo {
       font-size: 2.5rem;
       font-weight: bold;
-      color: #444;
+      color: #222;
     }
 
     .logo span {
-      color: #ff4081;
+      color: #e75480;
     }
 
     nav {
-      margin-top: 15px;
+      margin-top: 10px;
     }
 
     nav a {
-      margin: 0 18px;
+      margin: 0 15px;
       font-size: 1.1rem;
-      text-decoration: none;
-      color: #444;
-      position: relative;
       padding-bottom: 5px;
+      position: relative;
     }
 
     nav a::after {
       content: '';
       height: 2px;
       width: 0;
-      background: #ff4081;
+      background: #e75480;
       position: absolute;
       bottom: 0;
       left: 0;
-      transition: 0.3s ease-in-out;
+      transition: 0.3s ease;
     }
 
     nav a:hover::after {
       width: 100%;
     }
 
-    .hero {
+    section {
       padding: 60px 20px;
       text-align: center;
+      animation: fadeIn 1s ease;
+    }
+
+    .hero {
+      background: #fff0f5;
+      padding: 80px 20px;
     }
 
     .hero h1 {
-      font-size: 3rem;
-      color: #ff4081;
+      font-size: 3.2rem;
+      color: #e75480;
       margin-bottom: 20px;
     }
 
@@ -79,12 +94,83 @@
       line-height: 1.6;
     }
 
-    .section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
+    .highlight {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin-top: 50px;
     }
 
-    .section h2 {
-      fon
+    .box {
+      background-color: white;
+      border: 1px solid #f8d3dc;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 800px;
+      margin: 0 auto;
+      transition: transform 0.3s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+    }
+
+    .box img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .box h2 {
+      color: #e75480;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .box p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (min-width: 768px) {
+      .highlight {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .box {
+        width: 45%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Brave<span>In</span>Pink</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Donate</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Empowering Through Awareness</h1>
+    <p>BraveInPink is a nonprofit dedicated to spreading awareness about breast cancer through community events and outreach. Our mission is to support, educate, and unite people from all walks of life in the fight against breast cancer.</p>
+  </section>
+
+  <section>
+    <h2>Event Highlights</h2>
+    <div class="highlight">
+      <div class="box">
+        <im
