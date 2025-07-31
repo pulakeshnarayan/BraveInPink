@@ -5,70 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Brave In Pink</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header class="header">
     <div class="container">
       <div class="logo">Brave<span style="color: #ff69b4;">In</span>Pink</div>
-     <nav class="navbar">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="donate.html">Donate</a>
-  <a href="contact.html">Contact</a>
-</nav>
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </header>
 
   <section class="hero">
-    <h2>Brave In Pink</h2>
-    <p>Empowering lives affected by breast cancer through community action, events, and support.</p>
-    <a href="#signup" class="btn">Join Our Next Event</a>
-  </section>
-
-  <section id="about" class="section light">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>We’re a youth-led nonprofit dedicated to raising awareness and supporting individuals impacted by breast cancer.</p>
+    <div class="container fade-in">
+      <h1>BraveInPink</h1>
+      <p>Bringing communities together through awareness, compassion, and action.</p>
     </div>
   </section>
 
-  <section id="signup" class="section">
+  <section class="mission fade-in">
     <div class="container">
-      <h2>Sign Up for Our Next Event</h2>
-      <form>
-        <input type="text" placeholder="Full Name" />
-        <input type="email" placeholder="Email Address" />
-        <button class="btn">Sign Up</button>
-      </form>
+      <h2>Our Mission</h2>
+      <p>
+        We started BraveInPink to raise awareness about important social issues in our community. Our goals include
+        organizing community events, promoting positive engagement, and empowering youth through collaborative action.
+      </p>
     </div>
   </section>
 
-  <section id="donate" class="section light">
+  <section class="highlight fade-in">
     <div class="container">
-      <h2>Help Us Reach Our Goal</h2>
-      <div class="tracker">
-        <div id="tracker-fill" class="tracker-fill"></div>
-      </div>
-      <a href="https://www.gofundme.com/" target="_blank" class="btn outline">Donate on GoFundMe</a>
+      <h2>Previous Event Highlight</h2>
+      <img src="assets/previous-event.jpg" alt="Previous Event" class="highlight-img" />
+      <p>Our most recent event brought together over 100 participants! Congratulations to our winners:</p>
+      <img src="assets/winners.jpg" alt="Event Winners" class="highlight-img" />
     </div>
   </section>
 
-  <section id="contact" class="section">
+  <section class="upcoming fade-in">
     <div class="container">
-      <h2>Contact Us</h2>
-      <form>
-        <input type="text" placeholder="Your Name" />
-        <input type="email" placeholder="Your Email" />
-        <textarea rows="5" placeholder="Your Message"></textarea>
-        <button class="btn">Send Message</button>
-      </form>
+      <h2>Upcoming Event</h2>
+      <img src="assets/upcoming-event.jpg" alt="Upcoming Event" class="highlight-img" />
+      <ul>
+        <li><strong>Date:</strong> August 25, 2025</li>
+        <li><strong>Location:</strong> Raleigh Community Center</li>
+        <li><strong>Grand Prize:</strong> $500 Gift Card + Custom Trophy</li>
+        <li><strong>Activities:</strong> Basketball, music, food trucks, and giveaways</li>
+      </ul>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Brave In Pink. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 BraveInPink. All rights reserved.</p>
+    </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
