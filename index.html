@@ -2,406 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Brave In Pink</title>
-
-  <!-- Google Fonts link for Comfortaa -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nonprofit Website</title>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet" />
-
   <style>
-    /* Reset */
-    * {
+    body {
+      font-family: 'Comfortaa', cursive;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Comfortaa', cursive, sans-serif;
-      background-color: #fff9fb;
-      color: #222;
-      overflow-x: hidden;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
+      background-color: #ffffff;
+      color: #333;
     }
 
     header {
-      background-color: #fcd0da;
+      background-color: #f4f4f4;
       padding: 20px;
       text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
 
-    .logo {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #222;
+    h1 {
+      margin: 0;
+      font-size: 2.2rem;
     }
 
-    .logo span {
-      color: #e75480;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      margin: 0 15px;
-      font-size: 1.1rem;
-      padding-bottom: 5px;
-      position: relative;
-    }
-
-    nav a::after {
-      content: '';
-      height: 2px;
-      width: 0;
-      background: #e75480;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      transition: 0.3s ease;
-    }
-
-    nav a:hover::after {
-      width: 100%;
+    main {
+      padding: 40px 20px;
+      text-align: center;
     }
 
     section {
-      padding: 60px 20px;
+      margin-bottom: 40px;
+    }
+
+    .donation-section {
+      background-color: #f9f9f9;
+      padding: 40px 20px;
       text-align: center;
-      animation: fadeIn 1s ease;
+      border-top: 1px solid #ddd;
     }
 
-    .hero {
-      background: #fff0f5;
-      padding: 80px 20px;
-    }
-
-    .hero h1 {
-      font-size: 3.2rem;
-      color: #e75480;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-
-    .highlight {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-      margin-top: 50px;
-    }
-
-    .box {
-      background-color: white;
-      border: 1px solid #f8d3dc;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-      border-radius: 15px;
-      padding: 30px;
-      max-width: 800px;
-      margin: 0 auto;
-      transition: transform 0.3s ease;
-    }
-
-    .box:hover {
-      transform: translateY(-5px);
-    }
-
-    .box img {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-
-    .box h2 {
-      color: #e75480;
+    .donation-section h2 {
       font-size: 1.8rem;
       margin-bottom: 10px;
     }
 
-    .box p {
+    .donation-section p {
       font-size: 1rem;
-      line-height: 1.6;
+      margin-bottom: 20px;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (min-width: 768px) {
-      .highlight {
-        flex-direction: row;
-        justify-content: center;
-      }
-
-      .box {
-        width: 45%;
-      }
-    }
-
-    /* Donation Section Styles */
-    .donation-section {
-      padding: 60px 20px;
-      text-align: center;
-      background-color: #ffe6f0;
-      animation: fadeIn 1s ease;
-    }
-
-    .donation-section h2 {
-      font-size: 2rem;
-      color: #e75480;
-      margin-bottom: 40px;
-    }
-
-    .donation-container {
+    .donate-buttons {
       display: flex;
-      flex-direction: column;
-      gap: 30px;
-      max-width: 800px;
-      margin: 0 auto;
-      justify-content: center;
-    }
-
-    .donation-box {
-      background-color: white;
-      border: 2px solid #e75480;
-      border-radius: 15px;
-      padding: 30px;
-      font-size: 1.5rem;
-      color: #e75480;
-      font-weight: bold;
-      cursor: pointer;
-      text-align: center;
-      text-decoration: none;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    .donation-box:hover {
-      background-color: #e75480;
-      color: white;
-    }
-
-    .donation-box svg {
-      width: 28px;
-      height: 28px;
-      fill: currentColor;
-    }
-
-    .paypal-box button {
-      all: unset;
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #e75480;
-      cursor: pointer;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-      padding: 0;
-    }
-
-    .paypal-box button:hover {
-      color: white;
-    }
-
-    /* Card icons container */
-    .payment-icons {
-      display: flex;
+      flex-wrap: wrap;
       gap: 12px;
-      margin-top: 10px;
       justify-content: center;
+      margin-top: 20px;
     }
 
-    /* Individual card icons */
-    .payment-icon {
-      width: 36px;
-      height: 24px;
-      fill: #e75480;
-      transition: fill 0.3s ease;
-    }
-
-    .donation-box:hover .payment-icon {
-      fill: white;
-    }
-
-    /* Google Pay and Apple Pay buttons styling */
-    .extra-payments {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin-top: 30px;
-    }
-
-    .extra-payments button {
-      background-color: white;
-      border: 2px solid #e75480;
-      border-radius: 15px;
-      color: #e75480;
-      font-size: 1.2rem;
-      font-weight: bold;
-      padding: 15px;
+    .donate-buttons button {
+      background-color: #fff;
+      color: #333;
+      border: 1.5px solid #ddd;
+      border-radius: 12px;
+      padding: 12px 20px;
+      font-size: 1rem;
       cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      transition: all 0.3s ease;
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 12px;
+      gap: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     }
 
-    .extra-payments button:hover {
-      background-color: #e75480;
-      color: white;
+    .donate-buttons button:hover {
+      background-color: #f8f8f8;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
     }
 
-    .extra-payments svg {
-      width: 28px;
-      height: 28px;
-      fill: currentColor;
-    }
-
-    @media (min-width: 768px) {
-      .donation-container {
-        flex-direction: row;
-        gap: 40px;
-      }
-
-      .donation-box {
-        flex: 1;
-        flex-direction: column;
-      }
-
-      .extra-payments {
-        flex-direction: row;
-        justify-content: center;
-        margin-top: 20px;
-      }
+    footer {
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="logo">Brave<span>In</span>Pink</div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Donate</a>
-    </nav>
+    <h1>Welcome to Our Nonprofit</h1>
   </header>
 
-  <section class="hero">
-    <h1>Empowering Through Awareness</h1>
-    <p>BraveInPink is a nonprofit dedicated to spreading awareness about breast cancer through community events and outreach. Our mission is to support, educate, and unite people from all walks of life in the fight against breast cancer.</p>
-  </section>
+  <main>
+    <section>
+      <h2>About Us</h2>
+      <p>We are dedicated to making a difference in our community through impactful initiatives.</p>
+    </section>
 
-  <section>
-    <h2>Event Highlights</h2>
-    <div class="highlight">
-      <div class="box">
-        <img src="https://via.placeholder.com/600x300?text=Previous+Event" alt="Previous Event">
-        <h2>Last Event: Pickleball Tournament</h2>
-        <p>Our last event was a huge success with over 50 participants. Congratulations to our winners! Thanks to everyone who helped us raise awareness and bring the community together.</p>
-      </div>
-      <div class="box">
-        <img src="https://via.placeholder.com/600x300?text=Upcoming+Event" alt="Upcoming Event">
-        <h2>Upcoming Event: Community Basketball</h2>
-        <p>Join us on August 15 at Central Park Gym for a basketball fundraiser! Grand prize for winners, food, live music, and more. Don’t miss out on this impactful event.</p>
-      </div>
-    </div>
-  </section>
+    <section>
+      <h2>Our Mission</h2>
+      <p>We aim to create meaningful change and provide support to those who need it most.</p>
+    </section>
+  </main>
 
-  <!-- Donation Section -->
   <section class="donation-section">
     <h2>Support Our Cause</h2>
-    <div class="donation-container">
-      <!-- GoFundMe box -->
-      <a href="https://www.gofundme.com/f/your-campaign" target="_blank" rel="noopener" class="donation-box gofundme-box" aria-label="GoFundMe Donation Link">
-        <!-- GoFundMe SVG icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-          <path d="M32 4C17.64 4 6 15.64 6 30s11.64 26 26 26 26-11.64 26-26S46.36 4 32 4zm0 48a22 22 0 1 1 0-44 22 22 0 0 1 0 44z"/>
-          <path d="M44.5 19h-4.47c-2.11 0-3.37 1.17-3.37 3.45 0 1.94 1.2 2.91 2.57 3.37l3.5 1.1c.82.26 1.17.55 1.17 1.15 0 .73-.71 1.34-2.06 1.34-2.41 0-3.84-1.32-4.15-3.88h-4.56c.14 4.82 2.83 7.53 7.1 7.53 3.7 0 6.15-2.01 6.15-5.37 0-2.58-1.78-3.92-3.89-4.33l-3.39-1.05c-.7-.22-1.02-.5-1.02-1.01 0-.5.5-.94 1.66-.94 2.22 0 3.43 1.38 3.73 3.57h4.57c-.06-3.64-2.59-6.27-6.8-6.27-3.75 0-6.35 2.2-6.51 5.47z"/>
-        </svg>
-        GoFundMe
+    <p>Your donations help us make a bigger impact.</p>
+    <div class="donate-buttons">
+      <a href="https://www.gofundme.com/f/your-campaign" target="_blank">
+        <button>GoFundMe</button>
       </a>
 
-      <!-- PayPal donate form -->
-      <form action="https://www.paypal.com/donate" method="post" target="_blank" class="donation-box paypal-box" aria-label="PayPal Donation Form">
-        <input type="hidden" name="business" value="your-paypal-email@example.com" />
-        <input type="hidden" name="no_recurring" value="0" />
-        <input type="hidden" name="currency_code" value="USD" />
-        <button type="submit" aria-label="Donate via PayPal">
-          <!-- PayPal SVG Icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M6.94 6.2h1.797c.933 0 1.496-.018 2.146.135.577.13.989.39 1.216.756.314.49.328 1.14.234 1.595l-.505 2.28c-.063.28-.195.57-.4.815-.297.345-.775.52-1.275.554l-3.61.256a.853.853 0 0 1-.77-.506L4.61 8.45c-.108-.252-.145-.51-.11-.767a1.178 1.178 0 0 1 .517-.823 1.159 1.159 0 0 1 .657-.16h1.32z" fill="#00457C"/>
-            <path d="M12.39 5.4c1.215-.04 2.63-.2 3.735-.28 1.683-.11 2.98 1.056 2.53 3.206-.386 1.775-1.02 4.68-1.293 5.965-.06.304-.22.57-.44.79-.45.44-1.14.64-1.66.66-1.317.07-3.02.155-4.453.216-1.48.06-2.617-.7-2.16-2.3.424-1.55 1.48-5.317 1.85-6.9a1.328 1.328 0 0 1 1.43-1.41z" fill="#009CDE"/>
-            <path d="M5.25 14.92l.51 1.007c.02.048.09.178.26.29.137.086.34.16.628.17l3.565.25c.84.05 1.49.02 1.91-.12.27-.09.48-.2.61-.34.2-.22.27-.53.28-.78.07-.96.22-2.41.4-3.67.14-1.01.15-1.6.07-1.98-.04-.21-.12-.33-.23-.42-.35-.28-1.02-.27-1.78-.24-1.39.07-3.49.07-4.91.1a1.52 1.52 0 0 0-1.1.49 1.18 1.18 0 0 0-.22 1.27 1.22 1.22 0 0 0 .29.35z" fill="#003087"/>
-          </svg>
-          Donate via PayPal
-        </button>
-
-        <!-- Accepted card icons -->
-        <div class="payment-icons" aria-label="Accepted payment methods">
-          <!-- Visa SVG -->
-          <svg class="payment-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M2 4h20v16H2z" fill="#1a1f71"/>
-            <text x="4" y="16" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="10">VISA</text>
-          </svg>
-          <!-- MasterCard SVG -->
-          <svg class="payment-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 24" aria-hidden="true" focusable="false">
-            <circle cx="12" cy="12" r="10" fill="#eb001b"/>
-            <circle cx="24" cy="12" r="10" fill="#f79e1b" opacity="0.9"/>
-          </svg>
-          <!-- Amex SVG -->
-          <svg class="payment-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 40" aria-hidden="true" focusable="false">
-            <rect width="64" height="40" fill="#2e77bb"/>
-            <text x="12" y="25" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="18">AMEX</text>
-          </svg>
-        </div>
+      <form action="https://www.paypal.com/donate/?hosted_button_id=YOUR_ID_HERE" method="post" target="_blank">
+        <button type="submit">PayPal / Card</button>
       </form>
-    </div>
 
-    <!-- Google Pay and Apple Pay Buttons -->
-    <div class="extra-payments" aria-label="Other payment options">
-      <button type="button" aria-label="Pay with Google Pay" onclick="alert('Google Pay integration coming soon!')">
-        <!-- Google Pay SVG icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-          <path fill="#4285F4" d="M4 38V10h40v28z"/>
-          <path fill="#fff" d="M18 33h-5v-3h3v-2h-3v-2h5zM28 33h-4v-3h3v-2h-3v-2h4z"/>
-        </svg>
-        Google Pay
-      </button>
-
-      <button type="button" aria-label="Pay with Apple Pay" onclick="alert('Apple Pay integration coming soon!')">
-        <!-- Apple Pay SVG icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-          <path fill="#000" d="M42 19c-3 0-5.1 2.1-5.1 5.1 0 3.1 2.1 5.2 5.1 5.2 3.1 0 5.2-2.1 5.2-5.2 0-3-2.1-5.1-5.2-5.1z"/>
-          <path fill="#000" d="M36 43c-2 0-4-1.3-4-4.2 0-2.9 3-5.7 5.1-5.7 2 0 4 1.6 4 4.5 0 3-3 5.4-5.1 5.4z"/>
-        </svg>
-        Apple Pay
-      </button>
+      <button onclick="alert('Google Pay integration coming soon!')">Google Pay</button>
+      <button onclick="alert('Apple Pay integration coming soon!')">Apple Pay</button>
     </div>
   </section>
+
+  <footer>
+    &copy; 2025 Our Nonprofit Organization. All rights reserved.
+  </footer>
 
 </body>
 </html>
