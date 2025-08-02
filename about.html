@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Brave In Pink</title>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -12,17 +12,14 @@
       box-sizing: border-box;
       font-family: 'Comfortaa', cursive;
     }
-
     html {
       scroll-behavior: smooth;
     }
-
     body {
       background-color: #fff;
       color: #333;
       line-height: 1.6;
     }
-
     header {
       background-color: #f8f8f8;
       display: flex;
@@ -32,67 +29,56 @@
       height: 60px;
       border-bottom: 1px solid #ddd;
     }
-
     .logo-placeholder {
       width: 40px;
       height: 40px;
       background-color: #ddd;
       border-radius: 50%;
     }
-
     .brand-title {
       font-size: 1.5rem;
       color: #e91e63;
       text-align: center;
       flex: 1;
     }
-
     nav {
       display: flex;
       gap: 20px;
     }
-
     nav a {
       text-decoration: none;
       color: #333;
       transition: color 0.3s;
     }
-
     nav a:hover {
       color: #e91e63;
     }
-
     .about-section {
       max-width: 900px;
       margin: 60px auto 30px;
       padding: 0 20px;
       text-align: center;
     }
-
     .about-section h2 {
       font-size: 2rem;
       margin-bottom: 20px;
       color: #e91e63;
     }
-
     .about-section p {
       font-size: 1rem;
       line-height: 1.8;
       color: #444;
     }
-
     .team-section {
       max-width: 1200px;
       margin: 60px auto;
       padding: 0 20px;
     }
-
     .team-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
     }
-
     .team-member {
       background: #fafafa;
       border-radius: 12px;
@@ -100,16 +86,26 @@
       text-align: center;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     }
-
     .team-member .photo {
-      width: 100px;
-      height: 100px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       background-color: #ccc;
       margin: 0 auto 15px;
       object-fit: cover;
+      object-position: center;
+      display: block;
     }
-
+    .team-member h3 {
+      margin-bottom: 5px;
+      color: #e91e63;
+    }
+    .team-member h4 {
+      margin-bottom: 15px;
+      font-weight: 600;
+      color: #777;
+      font-style: italic;
+    }
     .team-member p {
       font-size: 0.95rem;
       color: #666;
@@ -139,57 +135,65 @@
   <section class="team-section">
     <div class="team-grid">
 
+      <!-- 1. Heli Patel -->
       <div class="team-member">
-        <img class="photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/..." alt="Heli Patel" />
+        <img class="photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wCEAAkGBxIQEBIQEhIQEBEQEBIQEBEQEBEQEBEQFREWFhURExUYHSggGBolHRUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGy0lICUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKgBLAMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAAAQIDBAUGB//EAD0QAAIBAgQEBAMHBQkAAAAAAAABAgMEBREGEiExQVEiYXGBBjJCkaHRFCNS0fAjYnKCkrLxU4KS0v/EABkBAQADAQEAAAAAAAAAAAAAAAABAgMEBf/EACMRAAICAgICAgMBAAAAAAAAAAABAhEDIRIxQQQTUWEUImH/2gAMAwEAAhEDEQA/AP1xcRUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAUUUAf/2Q==" alt="Heli Patel">
         <h3>Heli Patel</h3>
         <h4>Co-founder</h4>
         <p>“Hi, I'm Heli Patel and I'm class of 2028 at Enloe High School. I love hanging out with my friends, listening to music, and traveling. I'm very excited for future events held by BraveInPink and grateful to get the chance to provide support for those affected by breast cancer!”</p>
       </div>
 
+      <!-- 2. Reeva Patel -->
       <div class="team-member">
-        <img class="photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/..." alt="Reeva Patel" />
+        <img class="photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wCEAAkGBxISERISEBAVEBIQEBAQEA8PEA8PFRUWFRUXFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGzUmICYtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKgBLAMBIgACEQEDEQH/xAAaAAACAwEBAAAAAAAAAAAAAAAAAgEDBAUG/8QAKRAAAgEDAwMDBQAAAAAAAAAAAQIDAAQRBRIhMUFRBhMUQVFhcYGRobH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABsRAAEEAwAAAAAAAAAAAAAAAAEAAgMEBRFB/9oADAMBAAIRAxEAPwDJVFAFFFABRRQAUUUAFH6G9VTl9IV3RxvI3LCMJNbR+JFcjsLuEBMRSpVcMKc8Acz5nNTjvZTx+osCMlpVUcfYmjfvbp8hZ9zS6lW5eYHTJLM8vWQkGPPHOc0DjkkcA+KxlYZkT2PuvK+q6TjGTWPgOdrWskcsWM0h1SXF5ZmCklG0ZWIGenOPX61Ju28v91ukcFHLc5H2XkH2qNaaWkD9Oijqz5J51GFUVlJJKr1NBFkIlfZKQvVpIz/TfPPtR8PVOVDnaFGOSr5hpVqFkjK46VjNjmnWrHnCozkFSQvI5CgkqQRntUVTTFVOFSklkEsRpJFa7DMXM4mOecjj5U9DjivbfT9F0sSOGW1HfTpH96V7wziRt0NgEFVYYqDgLg9KEnk4/9mva1b/aWpTVmfIMh3FY0tG6nTwWIEzYllPYnkCvYlLZNLRmwtZRrLcd3Zvm5JPPwB/Wq6w+JxpZHg02oX9z0gIXqQx5qCSMefx8x6c9aX5aPC1taXdoNVdJ5Ty/NuCipKg4H8s8nrR28Lw6xqsVrBblTJIipPIwKhaKcZyCOuOlJqk2NJ6LCKODy8s/h3pYJ6EyokLVFKFW+HwlT1JPJKvIOML+ff+tLqzYsNuuG2ltZ12ylPNSjN9IUZGwwA46jHOBxxQDG+itZJqMky5Tj1kkXjPtwB+9TGCcgcZ9DRrzw4ZXRypFq5lDkI6jiMUcVT6pbSNRRQ6mUqtLGSBPPfjPFBqOpbqTrT3CKshyy5Cv+Co/Wgkn09BWvy4sPGkXdrLpWhZmC5mVJJ6Dpyc/WkocUkeopF5qWr9xDcN5ByGYxGFbGwP0/Gs0aXXbzy1NQQiTwHLqSMncOMLzxjHFBg/p6N5eNGxl/tZJFtLE8sIZc+TA9h6ClZ3cCxvLGLt9nM7z7L8SqwB9zWroMjK6gBzkuTgYH6GpM49oT3Evnwxj+PtTkOO8KnPTPfj6muo8Xk89yuJQkmWYrhizliMZ27kZ6UoYnL5WLTPhhLiW2nIzJWUbADqBnjcN7DFR9Qduv3k0nEhGEpZPbRJlE8uWyPysOc59aO5j6YQHISBHUHGM1ljkczL8MMZwMjIq6N2dTioys9foKM/Cd20ik8g/9k=" alt="Reeva Patel">
         <h3>Reeva Patel</h3>
         <h4>Co-founder</h4>
         <p>“Hi, I'm Reeva Patel and I'm class of 2028 at Panther Creek High School. I play volleyball and like to sing. BraveInPink's mission is very important to me because many of my close family members have been affected by breast cancer, and I hope that through BraveInPink we can make a difference in someone's life!”</p>
       </div>
 
+      <!-- 3. Shreya Patel -->
       <div class="team-member">
-        <img class="photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/..." alt="Shreya Patel" />
+        <img class="photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wCEAAkGBxIQEhIQEBIQEBIQEBUPDw8QEA8QFhUXFhUSFRUYFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGi0lICYtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKgBLAMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAECBQAGB//EADcQAAICAQIDBgQEBwAAAAAAAAABAgMRBBIhBTFBUWFxBhMykaGxFUKhscHwFBUjYnLB0uHhM0Oi/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAECAwQF/8QAJhEBAQACAgEEAgMAAAAAAAAAAAECAxESITEEMUEyE0JhcYGRof/aAAwDAQACEQMRAD8A+cU1bV2ZrWUhaKWVlbyWMoU6Jrko1lFJSSc5HBp1VKp3YqwBxSQkYBxj6VdzqMXZVhGGWzGPMYV3YY8YqEZk5wcV8U0wXht00ZPqxoPVxkFg0Od4ysPtTr1AYtH8UlSwOB3pQxS9n0lPoQx1Pj9mVxYuwGQGAMxRwOR+1XLptTnz6pPO56hFOqvJIxh0+fepYSo6ldHguLKU2kE7VkDyOnPBNWgApPB46evNcqQ80UEKrlPoCClGMKMk5p4YZH5pChScUUUAFJSlI3PP9aUHzZoP/Z" alt="Shreya Patel">
         <h3>Shreya Patel</h3>
         <h4>Co-founder</h4>
         <p>“Hi, I'm Shreya Patel and I'm class of 2027 at Green Hope High School. I love to dance, bake, and travel. I am so excited to empower, educate, and support those affected by breast cancer in our area through the efforts of BraveInPink!”</p>
       </div>
 
+      <!-- 4. Pulakesh Narayan -->
       <div class="team-member">
-        <img class="photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/..." alt="Pulakesh Narayan" />
+        <img class="photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wCEAAkGBxISEhUSEhIWFRUVFxUVFRUVFhUVFhUVFRUXFhUVFhUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGi0lHyUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKgBLAMBIgACEQEDEQH/xAAaAAADAQEBAQAAAAAAAAAAAAAAAQIDBAUG/8QAJRAAAgEEAQMFAQAAAAAAAAAAAQIDAAQFESEGEjFBUWEiMnGB/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAECAwT/xAAkEQACAgIBAwQDAAAAAAAAAAABAgMEEQAFEiExQRMiUWFxsf/aAAwDAQACEQMRAD8A8x4tx1zv6yGq6lG2WnRYpZQx6dzjFJSKkicnqRzkVKyo6xRnupY04t6UL7rjFKT+kaWep5wq8uTiqcXooxx/8ALe9qmn5B5h5UYk6pYmsdM+upGeuKloVReRWQ4WTVPX3o6jOaopzmm57bcq4HjBpi4TjJFOqTT0cZpTn6HfSnh4FAGUVeU/iEgnY/U+nT9RxQAP/2Q==" alt="Pulakesh Narayan">
         <h3>Pulakesh Narayan</h3>
         <h4>Outreach</h4>
         <p>“Hi, I'm Pulakesh Narayan, I'm class of 2028 at Enloe High School, and a few things I like to do are playing basketball, hanging out with friends, and traveling. I'm excited to be a part of BraveInPink because I get to make a change for patients in need, and get to raise awareness for breast cancer!”</p>
       </div>
 
+      <!-- 5. Aarnavi Rajagopal -->
       <div class="team-member">
-        <img class="photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/..." alt="Aarnavi Rajagopal" />
+        <img class="photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wCEAAkGBxISEhUTEhMWFRUXFRgYFRgYFx0YFRcXFRUYFxcYFxcYHSggGBolHRcVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGy0lICUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKgBLAMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAACAwABBAUGB//EADgQAAIBAwIDBgQEBwAAAAAAAAABAgMRBBIhMUEFE1FhcQYTIjJScaGx0QXhFCNSUoKS4f/EABkBAQEBAQEBAAAAAAAAAAAAAAACAwQEBf/EACIRAQEAAwABBAMAAAAAAAAAAAABAhEDIRIxBEEiUWEFcYH/2gAMAwEAAhEDEQA/APXMa6uZW6gke+YraVyNOMqZCjmR6f1p03ksVlIx6gLVFPEiLGo+G1HoRq1qIpkDYZCgnbpxj2oX6nqCWYmZyNkMRRk8fnxgVULZPbMZ2grXgL7pqIqTsMlQnuJXjjPUdaNEnlj+1BkjHFAEcXlWUCMp7EfjTXPR0nY7bQ5Ujg8j2NRqsdIKhSoOMHpThZIn6Mkoep7VE9OMccVNjyVC6lZWBtKSOvPGKSoHkU6F0uQFVkJHPNVpZom1U5XZpJ+hQU/Ex/njA/pW5U7ZTL2+ElrmJZSc/5PArM2Mgc/pP1qVLDyFCB0PXNF5UsnpU2KUAZHoKhdXOM0BiVNPFJUc6hFKAYo6BT06UAFSik6UAAo5A5pBTQAcYxU+QikYyoA3T2PWkUUhTylGAmq7E46mlp2YpCR8UAPvQOaMYyRSDr7UAIPlxU2HU9hV0c+XpUOW9B1pAAp5FLaASeOeKo+UeRUMMMURQUo2kNCKlKUuQnO4HcVOiKeOfelAGMrJpSnGg4NIyRTTVR+NU8lJxQeBSacKRk4AqNQI8kGmUAYzSYxilPNIT+dABSj2pRinFACKT2oFACkB4pTzQAmaSjg+lADuKTigBzRj1oo96UAAp6Ug96UAKcflQDRxzQA6mjFKTigBa3HlUqk6S65UE8YOdQoyKWKg3YhcGrYcf30u48kYxTs5UnKsptB64Ap15LZx70oJxnBqFU7WlLjuCc5p9SMGkMmgAvWjDN4RzUkWJBPOKDNQqxWkLjZ6dBRjnpQKnZ9KnXwoAFIDSKew6VJyU0BI4pPrUCo4pY3JpRQA9F5VQRjJFK0KEFGTgnpTFB5qD9KDyf/r0AQxWZK1ERAwBx2pOeBTj1pWcDjGPWmkACloHWoYzQMDpTj9KYwxQAikJzQAlHX0qVxxQADmnPNKrkY5pRiB+dAGml5qMxzSkzQAolznrSYxxQA0kUUAKVABNJSH5qUnB5pwB/nqaegpoAo7nFIaTvRQAokcUE8cUEcCgBaBSYwKKcCgB0qOaU9KMEUBdRn4f60/zK6vGo2x6ka8WpWpKSZWhRcLKPnBCdO1agPNxTsKkHr1qEGLD2P4VuZNLxTqmnUhrqQ6zDDHxrgcA9qvG+uWqkmmMc1sblJYEjXONrj7qq0P3jpGua1bHu4p4LNGSVFOcXPDGfukcDv60p0LgRVA+4ZOSBWjsFn55rqSi4LZcK5TjGKxpyVPIzgjqKip7evvtK8qcXKYEqvIZPRR9zRg7ZwMVxEknBAxjvWZXZ5oV0ldzypTnS1RUUApwpApwpGTSbOKUZoAPmjAoNABjijml5oATmk5pjNKDj0oANqZzSUASlFJUZpTQAoFABRSUUAFFFFABRRRQAUUUAFIppphH//2Q==" alt="Aarnavi Rajagopal">
         <h3>Aarnavi Rajagopal</h3>
         <h4>Outreach</h4>
         <p>“I'm excited to be a member of BraveInPink because it would be great to contribute to a cause that impacts so many lives and helps raise awareness about something so important. It is so empowering to work with people who care about making a difference!”</p>
       </div>
 
+      <!-- 6. Rishi Raghuram -->
       <div class="team-member">
-        <img class="photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/..." alt="Rishi Raghuram" />
+        <img class="photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wCEAAkGBxISEhISEhIWFRUVFRUXFhUXFRUVFRUVFhUXFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGzclICUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKgBLAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAFAQIDBAYAB//EADwQAAIBAwMBBQUEBwAAAAAAAAECAwQFEQASITFBBhNRcQYUIjJhcYGRobHB0fAzUnKSoqLh8RYkQ//EABoBAQADAQEBAAAAAAAAAAAAAAABAgMEBQb/xAAqEQACAQMDAgQHAAAAAAAAAAABAgMEBREhBhIxExQiQVFhcZEjkaHB/9oADAMBAAIRAxEAPwD7YoRRRQAUUUAFYxUTVMzxTCaNp7GCSAOvWnWml1IxySGCfzq5CldRTHA6ZrQ2zuxT51xB6D3NSlJWcCgCiqjPyqzOUDk0UtG7UABRThgUZNNGxQAUlKUUAFFFABRRRQAUUUAFJS0oAoPFNP0p7HtULm2Kyq4PLmuRUjBrXWFeq5VZSrRshqMdvlJp1BykYqwhSqRkAfyp4YpZkDl7VO5bqpBHX9KbWq6xmhiTzg7MEJndjp06YqVvDSUyQ9RVZ7lmIk6q8AqkYHqOoI5o6Ko2VlTz6VZk86m3uAfqaQyTjqKlUoc0qH96AJxS8rJn7U0DApUtIyKYA/lQAooGc0AQlOaUlAAcUDnNAClpB4p20p+tJQA3FlUgHBOB1qOtAxxQAtUVOMmgBApM1G5EJqoZ0bPSpqFgDjmi/jTzKdsEfnTw/jSkgKeoLAb0p5+1SpH/2Q==" alt="Rishi Raghuram">
         <h3>Rishi Raghuram</h3>
         <h4>Marketing</h4>
         <p>“Hi, I'm Rishi Raghuram, and I'm class of 2028 at Enloe High School. BraveInPink's mission is especially meaningful to me because my great-grandma passed away from cancer a few years ago. Seeing the impact cancer has on individuals and families has made me passionate about raising awareness and supporting those affected!”</p>
       </div>
 
+      <!-- 7. Saryu Donda -->
       <div class="team-member">
-        <img class="photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/..." alt="Saryu Donda" />
+        <img class="photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wCEAAkGBxISEhUSEhIWFRUXFRUXFhUXFhUVFRUVFRUXFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGy0lICYtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKgBLAMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAACAwABBQEGB//EADwQAAIBAwIDBgQEBwAAAAAAAAABAgMRBBIhMQVBUWEiMlJxgZGhwRMUFDLB0fAjM1Lh8RYkQ5Ky8f/EABkBAAMBAQEAAAAAAAAAAAAAAAABAgMEBf/EACcRAAICAQQCAgMAAAAAAAAAAAABAhEDBBIhMUETUQUTIiMyQmGB/9oADAMBAAIRAxEAPwDaB8v2xG2yeWKJGPYA+fyqaKGNIRSWcY4ABpPEiqFEq7VOM08ElONpTFAE7dWTxSgY45wBSdRSUgFSFHqaU54oAdRtNKD0oAHvTgUAcHHSigBxQAUUUAFJSUUAc0AFFFFABRRRQAUUUAFJSUAFFFFABRRRQAUUUAFJS0oAKKKUUAf/9k=" alt="Saryu Donda">
         <h3>Saryu Donda</h3>
         <h4>Secretary</h4>
         <p>“Hi, I'm Saryu Donda and I am class of 2028 at Apex Friendship High School. I am so excited to be a part of BraveInPink and help support the cause. I love their cause because they are providing support and hope to those affected by breast cancer, and are dedicated to improving lives for so many people!”</p>
       </div>
 
+      <!-- 8. Samhitha Chowdari -->
       <div class="team-member">
-        <img class="photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/..." alt="Samhitha Chowdari" />
+        <img class="photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wCEAAkGBxISEhUSEhMWFRUXFxgYFRgYFxcYFRcYFRUXFhUXFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGy0lICYtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKgBLAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAADAAECBAUGB//EADwQAAIBAwMBBgQEBwAAAAAAAAABAgMRBBIhMUEFE1FhcaGR8BMiMkKhsTNCUmKSscHh8RYkU6Lx/8QAGgEBAQEBAQEBAAAAAAAAAAAAAAECBAUDAf/EACIRAQEAAQQCAwAAAAAAAAAAAAABAhEDBBIhMUETIlFxkf/aAAwDAQACEQMRAD8AnSlBp05pmep4qVygl9BqQApe9IqXIFABRS5yKBGxQAUUUAFJSUgopzwKAslj5oGVRjjPFM0xRYWIBkHFTZZVKkqVFzjNMqIoZHpQAlIBpxFJ7HFAEFBk0jIzSEjigCCPxqAkXFAEHWk/KkpNADURmgCxCKSqRilRQQBkZpKYyKgFBKAkHAoQHTFLmORxQAfWgjHehFAHeT0p1DkoODjH1pccGlLQAcYpe9JSnFAE59aUYpaACpRSUtACUUUUAFFFFABRRRQAUUUAFJS0oAoopaACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/2Q==" alt="Samhitha Chowdari">
         <h3>Samhitha Chowdari</h3>
         <h4>Treasurer</h4>
         <p>“Hi, I'm class of 2028 at Enloe High School. I'm really excited to be a part of BraveInPink because of their cause in supporting women. In my free time, I like to dance, swim, and travel. I'm looking forward to helping this nonprofit grow!”</p>
