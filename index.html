@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brave in Pink</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brave In Pink</title>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
   <style>
     html {
@@ -14,54 +14,64 @@
     body {
       font-family: 'Comfortaa', cursive, sans-serif;
       margin: 0;
+      padding: 0;
       background-color: #fff;
       color: #333;
     }
 
-    .navbar {
+    nav.navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 10px 30px;
       background-color: #f8f8f8;
-      padding: 10px 20px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      height: 60px;
     }
 
-    .navbar .logo-placeholder {
+    .navbar-logo {
       width: 40px;
       height: 40px;
-      background-color: #ccc;
       border-radius: 50%;
+      background-color: #e91e63;
+      display: inline-block;
     }
 
-    .navbar .center-title {
-      font-size: 20px;
+    .navbar-title {
+      flex: 1;
+      text-align: center;
+      font-size: 24px;
       font-weight: bold;
-      color: #e91e63;
     }
 
-    .navbar .nav-links a {
+    .navbar-links a {
       margin-left: 20px;
       text-decoration: none;
       color: #333;
       font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .navbar-links a:hover {
+      color: #e91e63;
     }
 
     .hero {
+      padding: 100px 20px 40px;
       text-align: center;
-      padding: 60px 20px 30px;
     }
 
     .hero h1 {
-      font-size: 36px;
+      font-size: 48px;
+      margin-bottom: 20px;
       color: #e91e63;
     }
 
     .hero p {
       font-size: 18px;
+      line-height: 1.6;
       max-width: 600px;
       margin: 0 auto;
-      line-height: 1.6;
     }
 
     .donate-button-container {
@@ -72,7 +82,6 @@
     .donate-button {
       background-color: #e91e63;
       color: white;
-      border: none;
       padding: 14px 36px;
       font-size: 18px;
       border-radius: 50px;
@@ -80,6 +89,8 @@
       font-family: 'Comfortaa', cursive, sans-serif;
       transition: all 0.3s ease;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-decoration: none;
+      display: inline-block;
     }
 
     .donate-button:hover {
@@ -88,72 +99,77 @@
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
     }
 
-    .donate-button:active {
-      transform: translateY(0);
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
-    }
-
-    .donation-section {
+    footer {
       padding: 40px 20px;
-      background-color: #fce4ec;
+      background-color: #f8f8f8;
       text-align: center;
     }
 
-    .donation-section h2 {
-      color: #e91e63;
+    .donation-box {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: white;
     }
 
-    .payment-options button {
+    .donation-box h2 {
+      color: #e91e63;
+      margin-bottom: 20px;
+    }
+
+    .donation-options a {
+      display: inline-block;
       margin: 10px;
-      padding: 10px 20px;
-      border: none;
+      padding: 12px 24px;
       border-radius: 8px;
-      background-color: #fff;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-decoration: none;
+      background-color: #e91e63;
+      color: white;
       transition: background-color 0.3s ease;
     }
 
-    .payment-options button:hover {
-      background-color: #ffe6f0;
+    .donation-options a:hover {
+      background-color: #d81b60;
     }
   </style>
 </head>
 
 <body>
   <nav class="navbar">
-    <div class="logo-placeholder"></div>
-    <div class="center-title">BraveInPink</div>
-    <div class="nav-links">
+    <div class="navbar-logo"></div>
+    <div class="navbar-title">BraveInPink</div>
+    <div class="navbar-links">
       <a href="#">Home</a>
-      <a href="#">About</a>
+      <a href="#about">About</a>
       <a href="#donation">Donate</a>
-      <a href="#">Contact</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
 
   <section class="hero">
-    <h1>Support Breast Cancer Awareness</h1>
-    <p>We are dedicated to empowering those affected by breast cancer through community support, awareness, and direct financial assistance. Your help makes a difference.</p>
+    <h1>Support the Fighters, Admire the Survivors</h1>
+    <p>We are Brave In Pink, a nonprofit organization committed to raising awareness and supporting those affected by breast cancer. Join us in our mission to inspire hope, fund research, and stand with the brave.</p>
+
     <div class="donate-button-container">
-      <a href="#donation">
-        <button class="donate-button">Donate</button>
-      </a>
+      <a href="#donation" class="donate-button">Donate</a>
     </div>
   </section>
 
-  <section id="donation" class="donation-section">
-    <h2>Donate Now</h2>
-    <p>Your contribution supports life-saving programs and services.</p>
-    <div class="payment-options">
-      <button>GoFundMe</button>
-      <button>Visa</button>
-      <button>MasterCard</button>
-      <button>Amex</button>
-      <button>Google Pay</button>
-      <button>Apple Pay</button>
+  <footer id="donation">
+    <div class="donation-box">
+      <h2>Support Our Mission</h2>
+      <div class="donation-options">
+        <a href="https://www.gofundme.com" target="_blank">GoFundMe</a>
+        <a href="#">Visa</a>
+        <a href="#">Mastercard</a>
+        <a href="#">Amex</a>
+        <a href="#">Google Pay</a>
+        <a href="#">Apple Pay</a>
+      </div>
     </div>
-  </section>
+  </footer>
 </body>
 
 </html>
