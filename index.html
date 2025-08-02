@@ -2,89 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brave in Pink</title>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Comfortaa', sans-serif;
-      background-color: #fff;
-      color: #333;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 60px;
-      padding: 0 20px;
-      background-color: #fff;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .navbar .logo-placeholder {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: #f3c4d9;
-      margin-right: 20px;
-    }
-
-    .navbar .center-title {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      font-weight: 700;
-      font-size: 20px;
-      color: #e91e63;
-    }
-
-    .navbar .nav-links {
-      display: flex;
-      gap: 20px;
-    }
-
-    .navbar .nav-links a {
-      text-decoration: none;
-      color: #555;
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-
-    .navbar .nav-links a:hover {
-      color: #e91e63;
-    }
-  </style>
-</head>
-<body>
-  <nav class="navbar">
-    <div class="logo-placeholder"></div>
-    <div class="center-title">Brave in Pink</div>
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#donate">Donate</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-
-  <!-- Your existing content continues here... -->
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Brave In Pink</title>
+  <title>Brave in Pink</title>
 
   <!-- Google Fonts link for Comfortaa -->
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet" />
 
   <style>
-    /* Reset */
+    /* Reset/base */
     * {
       margin: 0;
       padding: 0;
@@ -103,51 +28,79 @@
       color: inherit;
     }
 
-    header {
-      background-color: #fcd0da;
-      padding: 20px;
-      text-align: center;
+    /* New navbar */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      height: 56px;
+      background-color: #fff;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      font-size: 0.9rem;
     }
 
-    .logo {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #222;
+    .navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
-    .logo span {
+    .logo-circle {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: #f3c4d9;
+      flex-shrink: 0;
+    }
+
+    .navbar-center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: #e75480;
+      pointer-events: none; /* so clicks go to right side if overlapping */
+    }
+
+    .navbar-right {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .navbar-right a {
+      position: relative;
+      padding: 6px 4px;
+      font-weight: 600;
+      color: #444;
+      transition: color .2s ease;
+    }
+
+    .navbar-right a:hover {
       color: #e75480;
     }
 
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      margin: 0 15px;
-      font-size: 1.1rem;
-      padding-bottom: 5px;
-      position: relative;
-    }
-
-    nav a::after {
+    .navbar-right a::after {
       content: '';
-      height: 2px;
-      width: 0;
-      background: #e75480;
       position: absolute;
-      bottom: 0;
       left: 0;
-      transition: 0.3s ease;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      background: #e75480;
+      transition: width .25s ease;
     }
 
-    nav a:hover::after {
+    .navbar-right a:hover::after {
       width: 100%;
     }
+
+    header { /* fallback if any leftover; not used now */ }
 
     section {
       padding: 60px 20px;
@@ -388,21 +341,26 @@
 </head>
 <body>
 
-  <header>
-    <div class="logo">Brave<span>In</span>Pink</div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Donate</a>
-    </nav>
-  </header>
+  <!-- new navbar replacing old header -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="logo-circle" aria-label="logo placeholder"></div>
+    </div>
+    <div class="navbar-center">Brave in Pink</div>
+    <div class="navbar-right">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#donate">Donate</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-  <section class="hero">
+  <section class="hero" id="home">
     <h1>Empowering Through Awareness</h1>
     <p>BraveInPink is a nonprofit dedicated to spreading awareness about breast cancer through community events and outreach. Our mission is to support, educate, and unite people from all walks of life in the fight against breast cancer.</p>
   </section>
 
-  <section>
+  <section id="about">
     <h2>Event Highlights</h2>
     <div class="highlight">
       <div class="box">
@@ -419,31 +377,32 @@
   </section>
 
   <!-- Donation Section -->
-  <section id="donate" style="padding: 60px 20px; background-color: #fdfdfd; text-align: center;">
-    <h2 style="font-size: 2rem; font-weight: 600; color: #333; margin-bottom: 10px;">Support Our Work</h2>
-    <p style="font-size: 1rem; color: #666; margin-bottom: 30px;">Help us continue making a difference.</p>
+  <section class="donation-section" id="donate">
+    <h2>Support Our Work</h2>
+    <p style="font-size: 1rem; color: #444; margin-bottom: 30px;">Help us continue making a difference.</p>
 
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px;">
-      <a href="https://www.gofundme.com/f/YOUR-CAMPAIGN" target="_blank" style="text-decoration: none;">
-        <button style="background: white; border: 1px solid #ccc; border-radius: 10px; padding: 12px 24px; font-size: 1rem; color: #333; transition: all 0.2s ease; cursor: pointer;">
-          GoFundMe
-        </button>
+    <div class="donation-container">
+      <a href="https://www.gofundme.com/f/YOUR-CAMPAIGN" target="_blank" class="donation-box">
+        <!-- GoFundMe icon could go here -->
+        GoFundMe
       </a>
 
-      <form action="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" method="post" target="_blank" style="display: inline;">
-        <button type="submit" style="background: white; border: 1px solid #ccc; border-radius: 10px; padding: 12px 24px; font-size: 1rem; color: #333; transition: all 0.2s ease; cursor: pointer;">
+      <form action="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" method="post" target="_blank" class="donation-box paypal-box">
+        <button type="submit" aria-label="Donate via PayPal">
           PayPal / Card
         </button>
       </form>
+    </div>
 
-      <button style="background: white; border: 1px solid #ccc; border-radius: 10px; padding: 12px 24px; font-size: 1rem; color: #333; transition: all 0.2s ease; cursor: pointer;" onclick="alert('Google Pay coming soon')">
+    <div class="extra-payments" aria-label="Other payment options">
+      <button type="button" aria-label="Google Pay" onclick="alert('Google Pay integration coming soon!')">
         Google Pay
       </button>
-
-      <button style="background: white; border: 1px solid #ccc; border-radius: 10px; padding: 12px 24px; font-size: 1rem; color: #333; transition: all 0.2s ease; cursor: pointer;" onclick="alert('Apple Pay coming soon')">
+      <button type="button" aria-label="Apple Pay" onclick="alert('Apple Pay integration coming soon!')">
         Apple Pay
       </button>
     </div>
   </section>
+
 </body>
 </html>
