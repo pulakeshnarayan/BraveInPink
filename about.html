@@ -6,25 +6,99 @@
   <title>About | Brave In Pink</title>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet"/>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Comfortaa', cursive; }
-    html { scroll-behavior: smooth; }
-    body { background-color: #fff; color: #333; line-height: 1.6; }
-    header { background: #f8f8f8; display: flex; align-items: center; justify-content: space-between;
-             padding: 10px 40px; height: 60px; border-bottom: 1px solid #ddd; }
-    .brand-title { font-size: 1.5rem; color: #e91e63; text-align: center; flex: 1; }
-    nav { display: flex; gap: 20px; }
-    nav a { text-decoration: none; color: #333; transition: color .3s; }
-    nav a:hover { color: #e91e63; }
-    .about-section { max-width: 900px; margin: 60px auto 30px; padding: 0 20px; text-align: center; }
-    .about-section h2 { font-size: 2rem; margin-bottom: 20px; color: #e91e63; }
-    .about-section p { font-size: 1rem; line-height: 1.8; color: #444; }
-    .team-section { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
-    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 30px; }
-    .team-member { background: #fafafa; border-radius: 12px; padding: 20px; text-align: center;
-                   box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
-    .team-member .photo { width: 100px; height: 100px; border-radius: 50%; object-fit: cover;
-                          margin: 0 auto 15px; background-color: #ccc; }
-    .team-member p { font-size: 0.95rem; color: #666; font-style: italic; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Comfortaa', cursive;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #f59dc5;
+      color: #4e2c24;
+      line-height: 1.6;
+    }
+    header {
+      background: #f59dc5;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 40px;
+      height: 60px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .brand-title {
+      font-size: 1.5rem;
+      color: white;
+      text-align: center;
+      flex: 1;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      transition: color .3s;
+    }
+    nav a:hover {
+      color: #4e2c24;
+    }
+
+    .about-section {
+      max-width: 900px;
+      margin: 60px auto 30px;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .about-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: white;
+    }
+    .about-section p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #4e2c24;
+    }
+
+    .team-section {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .team-member {
+      background: #f7cde0;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .team-member .photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 15px;
+      background-color: #ccc;
+    }
+    .team-member h3,
+    .team-member h4 {
+      color: #4e2c24;
+    }
+    .team-member p {
+      font-size: 0.95rem;
+      color: #4e2c24;
+      font-style: italic;
+    }
   </style>
 </head>
 <body>
@@ -46,7 +120,7 @@
       [your full about text here]
     </p>
   </section>
-
+  
   <section class="team-section">
     <div class="team-grid">
       <!-- 1. Heli Patel -->
